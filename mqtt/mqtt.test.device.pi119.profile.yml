@@ -1,0 +1,23 @@
+name: "Test.Device.MQTT.Pi119.Profile"
+manufacturer: "Raspberry"
+model: "Raspberry Pi ?"
+description: "Profile for Raspberry Pi 119"
+labels:
+  - "mqtt"
+  - "raspPi"
+deviceResources:
+  - name: cpu_temperature
+    description: "CPU Temperatur des Pis"
+    properties:
+      value: { type: "Float64", readWrite: "R", floatEncoding: "eNotation" }
+      units: { type: "String", readWrite: "R", defaultValue: "C" }
+  - name: bmp280_pressure
+    description: "Luftdruck"
+    properties:
+      value: { type: "Float64", readWrite: "R", floatEncoding: "eNotation" }
+      units: { type: "String", readWrite: "R", defaultValue: "hPa" }
+  - name: bmp280_temperature
+    description: "Temperatur"
+    properties:
+      value: { type: "Float64", readWrite: "R", floatEncoding: "eNotation" }
+      units: { type: "String", readWrite: "R", defaultValue: "C" }

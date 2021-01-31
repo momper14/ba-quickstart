@@ -1,0 +1,28 @@
+name: "Test.Device.MQTT.Pi136.Profile"
+manufacturer: "Raspberry"
+model: "Raspberry Pi ?"
+description: "Profile for Raspberry Pi 136"
+labels:
+  - "mqtt"
+  - "raspPi"
+deviceResources:
+  - name: bme680_temperature
+    description: "bme680 Temperatur"
+    properties:
+      value: { type: "Float64", readWrite: "R", floatEncoding: "eNotation" }
+      units: { type: "String", readWrite: "R", defaultValue: "C" }
+  - name: bme680_gas
+    description: "bme680 Gas"
+    properties:
+      value: { type: "Int64", readWrite: "R" }
+      units: { type: "String", readWrite: "R", defaultValue: "Ohm" }
+  - name: bme680_humidity
+    description: "bme680 Luftfeuchtigkeit"
+    properties:
+      value: { type: "Float64", readWrite: "R", floatEncoding: "eNotation" }
+      units: { type: "String", readWrite: "R", defaultValue: "%" }
+  - name: bme680_pressure
+    description: "bme680 Luftdruck"
+    properties:
+      value: { type: "Float64", readWrite: "R", floatEncoding: "eNotation" }
+      units: { type: "String", readWrite: "R", defaultValue: "m" }
